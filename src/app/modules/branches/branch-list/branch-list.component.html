@@ -3,12 +3,12 @@
 <div class="row g-3 align-items-center">
   <div class="col-10">
     <div class="input-group">
-      <input type="text" (keyup.enter)="GetData()" [(ngModel)]="searchCriteria" class="form-control" id="exampleFormControlInput1" placeholder="Search with Title Manager Name...">
-      <button type="button" (click)="GetData()" class="btn btn-primary">Search</button>
+      <input type="text" (keyup.enter)="GetData(1)" [(ngModel)]="searchCriteria" class="form-control" id="exampleFormControlInput1" placeholder="Search with Title Manager Name...">
+      <button type="button" (click)="GetData(1)" class="btn btn-primary">Search</button>
     </div>
   </div>
   <div class="col-2">
-    <button type="button" class="btn btn-success w-100">Add Branch</button>
+    <a class="btn btn-success w-100" [routerLink]="[BranchModify]" >Add Branch</a>
   </div>
 </div>
 <!-- Header -->
@@ -35,8 +35,8 @@
         <td>{{branch.openningHour}}</td>
         <td>{{branch.closingHour}}</td>
         <td>{{branch.workingHours}}</td>
-        <td><button type="button" class="btn btn-primary"><i class="bi bi-pencil-fill"></i></button></td>
-        <td><button type="button" class="btn btn-danger"><i class="bi bi-x-square"></i></button></td>
+        <td><a [routerLink]="BranchModify" class="btn btn-primary"><i class="bi bi-pencil-fill"></i></a></td>
+        <td><a  class="btn btn-danger"><i class="bi bi-x-square"></i></a></td>
       </tr>
     </tbody>
   </table>

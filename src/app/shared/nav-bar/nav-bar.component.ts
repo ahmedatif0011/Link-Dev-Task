@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pages } from 'src/app/Defaults/PageRoutes';
-
+import { PageRoutes } from 'src/environments/PageRoutes';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -14,6 +13,6 @@ export class NavBarComponent implements OnInit {
   }
 
   //links
-  branches = Pages.branches;
+  branches = PageRoutes.branchList;
 
 }
